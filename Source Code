@@ -1,0 +1,34 @@
+/* Program to remind the user every 3 hours */
+#include <stdio.h>
+#include <time.h>
+#include <iostream.h>
+#include <string.h>
+
+using namespace std;
+
+int main ()
+{
+	cout << "\t\nReminder\n";
+	string inputTime;
+	cout << " !!! IT'S TIME FOR Sanitizing !!! ";
+	
+	bool loop = true;
+	while (loop) 
+	{
+		float seconds = time(NULL);
+		while (seconds > 60*60*3) 
+		{
+			seconds -= 86400;
+		}
+		
+		float inputSeconds = inputTime[0] * 36000 + inputTime[1] * 3600 + inputTime[3] * 600 + inputTime[4] * 60 + inputTime[6] * 10 + inputTime[7];
+		
+		if (seconds > inputSeconds)
+		{
+			cout << inputTask;
+			loop = false;
+		}
+		sleep(1);
+	}
+	return(0);
+}
